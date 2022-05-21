@@ -8,5 +8,3 @@ total_amount=bill+tip
 single_share=round(total_amount/no_of_people ,2)
 
 print (f"each person should pay: ${single_share}")
-
-
