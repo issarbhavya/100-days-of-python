@@ -2,7 +2,7 @@ import random
 import string
 num_of_letters=int(input("enter no.letters you want in your password \n"))
 num_of_symbols=int(input("enter no. of symbols you want in your password \n"))
-num_of_numbers=int(input(f"amount of no. you want in the password (total digits left is : {num_of_letters - num_of_symbols}\n"))
+num_of_numbers=int(input(f"amount of no. you want in the password (now,total digits space left is: {num_of_letters - num_of_symbols})\n"))
 str_lst=[]
 num_lst=[]
 sym_lst=["!","@","#","$","&","*"]
