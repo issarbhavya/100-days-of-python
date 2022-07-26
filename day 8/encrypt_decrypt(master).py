@@ -1,7 +1,6 @@
 encrpy=""
 decrpy=""
 final_str=""
-result=""
 k=0
 n=0
 shift=0
@@ -13,7 +12,7 @@ def enc():
     encrpy=encrpy.lower()
     shift=int(input("enter values to be shifted by \n"))
     shift%=26
-    
+    result=""
     for i in encrpy:
         print(f"{i} is {ord(i)}")
         if ord(i)+shift>122:
