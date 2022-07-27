@@ -59,7 +59,7 @@ s=input("enter y to yourself choose the word \nElse press n so that computer may
 if s=="y":
     chosen_word=input("enter the word ")
 else:
-    chosen_word="cigaratte"    
+    chosen_word="cigarette"    
 
 l1=[]
 l2=[]
