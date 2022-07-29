@@ -10,9 +10,9 @@ menu = {
 }
 
 resources = {
-    "water": 300,
-    "milk": 200,
-    "coffee": 100,
+    "water": 600,
+    "milk": 600,
+    "coffee": 300,
 }
 
 coins={
@@ -32,10 +32,10 @@ def check_requirements(requirement,already_present):
         print("\nwater is insufficient")
     if not requirement["milk"]<already_present["milk"]:
         c+=1
-        print("\mmilk is insufficient")
+        print("\nmilk is insufficient")
     if not requirement["coffee"]<already_present["coffee"]:
         c+=1
-        print("coffee is insufficient")
+        print("\ncoffee is insufficient")
          
     global resources
     resources["water"]-=requirement["water"]
@@ -67,7 +67,16 @@ def check_amount_paid(amount):
         print(f"you are ${shortage} less\n\n")
         decision=input(f"press y to add the shortage amount of {shortage}\n\nElse press n to take back your money: ")
         if (decision=="y"):
-            check_amount_paid(shortage)
+            print(f"amount to be paid is : ${shortage}")
+            no_of_penny=int(input("enter no. of pennies deposited : "))
+            no_of_nickle=int(input("enter no. of nickle deposited : "))
+            no_of_dime=int(input("enter no. of dime deposited : "))
+            no_of_quarter=int(input("enter no. of quarter deposited : "))
+            inputed_amount=(no_of_penny*0.01)+(no_of_nickle*0.05)+(no_of_dime*0.10)+(no_of_quarter*0.25)
+            money_in_machine+=inputed_amount
+            if(inputed_amount>=shortage):
+                return True
+            
         else:
             return False
 
@@ -77,7 +86,7 @@ def coffee(name_of_coffee):
     cost=user_input["cost"]
     if(check_requirements(ingredients_required,resources)==True):
         if(check_amount_paid(cost)==True):
-            print(f"HERE IS YOU {name_of_coffee}, THANKS AND VISIT AGAIN")
+            print(f"\n\nHERE IS YOUR {name_of_coffee}, THANKS AND VISIT AGAIN")
         else:
             print("you were not able to pay the required amount so here's the amount you paid\n\n")
     else:
@@ -86,10 +95,11 @@ def coffee(name_of_coffee):
 machine_is_off=False
 while(machine_is_off==False):
     print("\n\nHELLO CUSTOMER \n")
-    choice_of_coffee_made=input("""pls enter what you want,
+    choice_of_coffee_made=input("""MENU IS,
              espresso
              latte
              cappuccino
+             
              : """)
     if choice_of_coffee_made=="report":
         code_entered=input("enter the machine code : ")
