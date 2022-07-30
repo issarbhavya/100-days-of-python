@@ -9,9 +9,9 @@ menu = {
     "cappuccino": {"ingredients": {"water": 250,"milk": 100,"coffee": 24,},"cost": 3.0,}
 }
 resources = {
-    "water": 600,
+    "water": 350,
     "milk": 250,
-    "coffee": 300,
+    "coffee": 100,
 }
 coins={
     "penny":0.01,
@@ -83,7 +83,7 @@ while(machine_is_off==False):
     print("\n\nHELLO CUSTOMER \n")
     lst_of_avaliability=avaliable_in_menu()
     
-    if(len(lst_of_avaliability)==0):
+    if not lst_of_avaliability:
         print("\nSorry we are not taking orders due to shortage of resources")
         machine_is_off=True
         break
