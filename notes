@@ -1,0 +1,119 @@
+####
+using trunc() to print integer after truncating
+
+print(math.trunc(a))
+
+ for 3. 86 nd for 3.02
+ it will print 3 only
+ 
+
+ 
+####
+using round() to print value till 2 decimal places
+print("The value of number till 2 decimal place(using round()) is : ", end="")
+print(round(a, 2))
+
+print(round((2 ** 0.5),2))
+
+
+####
+here in python we have match case instead of switch case
+
+match name[i]:
+        case "t":
+            c1 += 1
+            
+####            
+ ls.index(i)
+ will retun the value stored in list at i th position
+ 
+####
+random.choice(string.ascii_letters)
+
+this will randomly select alphabets.
+
+####
+random.choice(lst_name)
+
+this will select random value from the given list
+
+
+####
+final_lst.remove(index)
+
+or, 
+final_lst.remove("the name or the number in quotes")
+
+
+####
+("The ASCII value of '" + c + "' is", ord(c))
+
+ord(string)
+gives ascii value of string
+
+
+####
+from replit import clear
+
+this line clears the console
+
+
+####
+abs() function is used to get the absolute (positive) value of a given number.
+
+####
+syntax to copy a list
+new_list = list.copy()
+
+
+###########
+OOP
+###########
+
+the things which the object has are called there *attributes* (modeled by variabels)
+e.g. waiter is the object,
+waiter_is_holding_plate=True
+
+the thing which the object can do are called *methods*(usually modeled with function)
+def waiter_collects_order(table_no.,order)
+
+we can generate multiple version of same object
+from the same blueprint
+e.g. we can have 2 waiters
+
+####
+In oop we call this blueprint,
+or this type as class
+
+and the individual objects generated from the blueprint as "object"
+
+
+####
+how to create an object from the class
+
+car=CarBlueprint()
+
+here car is a object
+whereas, CarBlueprint() is the class/blueprint
+
+(here usually for case of class, the words aren't seprated by "_" instead their first letter is capatalized this is to differenciate btw class and other func)
+
+####
+
+car=CarBlueprint()
+*the car is now an object*
+
+spd=car.speed
+*this is now an attribute*
+
+rvrs=car.reverse()
+*this is now a method
+
+
+
+
+
+
+
+
+

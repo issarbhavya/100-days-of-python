@@ -24,7 +24,7 @@ def add_cards(lst):
 
 def check(player_sum,computer_sum):
     if(player_sum>21):
-        return "\n\nYOU LOOSE !!!"
+        return "\n\nYOU LOOSE  !!!"
 
     elif(player_sum>computer_sum):
         return "\n\nYOU WON !!!"
