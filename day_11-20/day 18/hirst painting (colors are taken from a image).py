@@ -1,19 +1,10 @@
-import turtle
-
-
-turtle.colormode(255)
+import colorgram
 from turtle import Turtle , Screen
 import random
 timmy=Turtle()
 timmy.penup()
 timmy.speed("fastest")
 timmy.hideturtle()
-def choose_color():
-    r=random.randint(0,255)
-    g=random.randint(0,255)
-    b=random.randint(0,255)
-    col=(r,g,b)
-    return col
 
 def draw_row(n):
     global l
@@ -32,14 +23,8 @@ for i in range(0,10):
 
 
 
+
+
+
 screen=Screen()
 screen.exitonclick()
-
-
-
-
-
-
-
-
-

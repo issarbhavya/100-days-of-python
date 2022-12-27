@@ -1,6 +1,4 @@
 import turtle
-
-
 turtle.colormode(255)
 from turtle import Turtle , Screen
 import random
