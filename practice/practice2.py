@@ -1,33 +1,38 @@
-menu = {
-      "espresso": {"ingredients": {"water": 50,"milk":0,"coffee": 18,},"cost": 1.5,},
-    "latte": {"ingredients": {"water": 200,"milk": 150,"coffee": 24,},"cost": 2.5,},
-    "cappuccino": {"ingredients": {"water": 250,"milk": 100,"coffee": 24,},"cost": 3.0,}
-}
+from turtle import Turtle,Screen
+screen=Screen()
+screen.setup(height=400, width=500)
+user_bet=screen.textinput(title="make your bet :-",  prompt="choose turtle you want to bet on : ")
 
-resources = {
-    "water": 600,
-    "milk": 600,
-    "coffee": 300,
-}
-                
-                
-                
-def avaliable_in_menu():
-    avaliable_items=[]
-    global menu
-    global resources
-    requirements=""
-    for order in menu:
-          requirements=menu[order]
-          ingredients=requirements["ingredients"]
-          c=0
-          for items in ingredients:
-                if ingredients[items]<resources[items]:
-                      c+=1
-                else:
-                  print(f"{items} is not suffecient for{order}")
-          if(c==3):
-                avaliable_items.append(order)
-    return avaliable_items
+colors=["red","green","yellow","blue","purple"]
+l=len(colors)
 
-avaliable_in_menu()
+p_red=Turtle()
+p_green=Turtle()
+p_yellow=Turtle()
+p_blue=Turtle()
+p_purple=Turtle()
+
+players_list=[p_red,p_green,p_yellow,p_blue,p_purple]
+y=-100
+for i in range(0,l):
+    players_list[i].color(colors[i])
+    players_list[i].shape("turtle")
+    players_list[i].speed(10)
+    players_list[i].penup()
+    players_list[i].goto(-240,y)
+    players_list[i].pendown()
+    players_list[i].speed("normal")
+    y=y+50
+
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+screen.exitonclick()
