@@ -1,0 +1,34 @@
+
+img = cv2.imread('Image.jpg')
+gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+
+# binary mask
+mask = cv2.threshold(gray,10,255,cv2.THRESH_BINARY)[1]
+
+
+# inverted binary mask
+th = cv2.threshold(gray,10,255,cv2.THRESH_BINARY_INV)[1]
+
+
+# finding external contours based on inverted binary mask
+contours, hierarchy = cv2.findContours(th, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_NONE)
+
+# create copy of original image to draw contours 
+img2 = img.copy()
+
+
+for c in contours:
+    M = cv2.moments(c)
+    cx = int(M['m10']/M['m00'])
+    cy = int(M['m01']/M['m00'])
+    centroid = (cx, cy)
+    color = tuple(img[cy, cx])
+    color = ( int (color [ 0 ]), int (color [ 1 ]), int (color [ 2 ])) 
+    print(color)
+    img2 = cv2.drawContours(img2, [c], 0, tuple(color), -1)
+
+
+r = img2 - img
+r[mask == 255] = (255, 255, 255)
+
+
