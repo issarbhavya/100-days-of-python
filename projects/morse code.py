@@ -35,7 +35,10 @@ def encryption():
     print(encrypted) 
     
 def decryption(encoded_str):
-    encoded_str=encoded_str+" "
+    
+    #encoded_str length is increased by 2 spaces to detect that a word has ended at the end as well.
+    encoded_str=encoded_str + "  "
+    
     letter_to_decode=""
     decoded_letter=""
     decoded_word=""
@@ -43,7 +46,7 @@ def decryption(encoded_str):
     for i in range(0,len(encoded_str)):
         
         if(encoded_str[i]==" " and encoded_str[i-1]==" "):
-            final += decoded_word + " "
+            final += decoded_word+ " " 
             decoded_word=""
             continue
                
@@ -60,9 +63,6 @@ def decryption(encoded_str):
     print(f"\ndecode string is : {final}\n")
     
             
-            
-            
-    
 task=int(input("Enter 1 to encrypt a string \n\nEnter 2 to decrypt a string\n\n"))
 print("\n\n")
 if(task==1):
@@ -71,7 +71,4 @@ elif (task==2):
     string_=input("enter the encrypted string which is to be decrypted : ")
     decryption(string_)
 else:
-    print("UNDEFINED TASK ASSIGNED")
-    
-                
-            
+    print("UNDEFINED TASK ASSIGNED")          
