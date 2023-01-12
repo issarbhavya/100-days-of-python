@@ -67,7 +67,7 @@ while(game_is_on==True):
           
             
     ball.move()
-    if(r_score_count>=win_points or l_score_count>=win_points):
+    if(r_score_count>win_points or l_score_count>win_points):
         end_game()
         
 

@@ -7,9 +7,9 @@ class Paddle(Turtle):
     def __init__(self, position):
         super().__init__()
         self.shape("square")
-        self.color("white")
         self.shapesize(5,1)
         self.penup()
+        self.color("black")
         self.goto(position)
         
     def go_up(self):
