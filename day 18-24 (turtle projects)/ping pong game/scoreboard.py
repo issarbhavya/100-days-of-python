@@ -33,8 +33,8 @@ class Scoreboard(Turtle):
         self.goto(0,0)
         self.pencolor("white")
         if(self.l_score>self.r_score):
-            self.write("Left player wins !!!" , align="center", font=("couries", 60 , "normal"))
+            self.write("Left player wins !!!" , align="center", font=("couries", 55 , "normal"))
         else:
-            self.write("Right player wins !!!", align="center", font=("couries", 60 , "normal"))
+            self.write("Right player wins !!!", align="center", font=("couries", 55 , "normal"))
         
         

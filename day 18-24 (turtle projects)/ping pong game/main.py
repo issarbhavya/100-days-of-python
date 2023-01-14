@@ -13,6 +13,7 @@ screen=Screen()
 screen.tracer(0)
 screen.setup(width=800,height=600)
 screen.bgcolor("purple")
+screen.title("THE FUCKIN PING PONG GAME")
 
 
 l_paddle=Paddle((-350,0))

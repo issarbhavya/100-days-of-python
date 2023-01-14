@@ -31,8 +31,8 @@ def end_game():
 screen.listen()
 screen.onkey(r_paddle.go_up,"Up")
 screen.onkey(r_paddle.go_down,"Down")
-screen.onkey(l_paddle.go_up,"w")
-screen.onkey(l_paddle.go_down,"s")
+screen.onkey(l_paddle.go_up,"e")
+screen.onkey(l_paddle.go_down,"d")
 
 
 
