@@ -4,7 +4,7 @@ from turtle import *
 import random
 
 timmy=Turtle()
-timmy.speed(10)
+timmy.speed("fastest")
 timmy.pensize(3)
 
 def choose_color():
